@@ -14,3 +14,12 @@ while($row = mysqli_fetch_array($res)){
 
   array_push($result,
      array('listFood' =>$row[1]));
+
+
+}
+
+echo json_encode(array("result"=>$result),JSON_UNESCAPED_UNICODE);
+
+mysqli_close($con);
+
+?>
